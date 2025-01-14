@@ -1,0 +1,76 @@
+name: Build and Release CLI
+
+on:
+  push:
+    branches:
+      - main  # main 브랜치에 푸시될 때 실행
+
+jobs:
+  build:
+    name: Build CLI
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 저장소 체크아웃
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Node.js 및 pnpm 설정
+      - name: Set up Node.js and pnpm
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20  # Node.js 버전
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # 3. 의존성 설치
+      - name: Install dependencies
+        run: pnpm install
+
+      # 4. CLI 빌드
+      - name: Build CLI
+        run: pnpm run build
+
+      # 5. 빌드 결과 아티팩트 업로드
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: cli-build
+          path: dist/  # 빌드 결과물 경로
+
+  release:
+    name: Release CLI
+    runs-on: ubuntu-latest
+
+    # 빌드 작업이 성공한 후 실행
+    needs: build
+
+    steps:
+      # 1. 저장소 체크아웃
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Node.js 및 pnpm 설정
+      - name: Set up Node.js and pnpm
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # 3. 빌드 아티팩트 다운로드
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: cli-build
+
+      # 4. NPM 배포 (semantic-release 사용)
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # GitHub 권한 토큰
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}        # NPM 배포 토큰
+        run: pnpm run release

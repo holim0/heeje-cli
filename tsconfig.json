@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "es6", // Rollup 호환 설정
+    "moduleResolution": "node", // Node.js 모듈 해석 방식
+    "target": "es5",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "noImplicitAny": true,
+    "lib": ["dom", "ES2015"],
+    "types": ["jest"] // Jest 타입 정의 추가
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"] // 제외 경로
+}
