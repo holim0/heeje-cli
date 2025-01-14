@@ -76,4 +76,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # GitHub 권한 토큰
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # NPM 배포 토큰
-        run: pnpm run release
+        run: npx semantic-release

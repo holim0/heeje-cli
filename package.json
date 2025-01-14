@@ -7,7 +7,6 @@
     "start": "node bin/cli.js",
     "clean": "rimraf bin",
     "build": "pnpm clean && rollup -c rollup.config.js --bundleConfigAsCjs",
-    "release": "semantic-release",
     "test": "jest",
     "test:watch": "jest --watch"
   },
