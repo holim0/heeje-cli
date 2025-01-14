@@ -47,5 +47,9 @@
     "semantic-release": "^24.2.1",
     "ts-jest": "^29.2.5",
     "typescript": "^5.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holim0/heeje-cli.git"
   }
 }
