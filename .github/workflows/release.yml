@@ -81,6 +81,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: cli-build
+          path: bin/
 
       # 4. NPM 배포 (semantic-release 사용)
       - name: Semantic Release
