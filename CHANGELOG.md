@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.0.2](https://github.com/holim0/heeje-cli/compare/v1.0.1...v1.0.2) (2025-01-31)
+
+### 🐛 BUG FIXES
+
+* artifact 다운로드 경로 명시 ([7b99538](https://github.com/holim0/heeje-cli/commit/7b9953870c262b7a99e8b3753512f9fcd6b7c055))
+
 ## [1.0.1](https://github.com/holim0/heeje-cli/compare/v1.0.0...v1.0.1) (2025-01-31)
 
 ### 🐛 BUG FIXES
