@@ -16,7 +16,7 @@
     "heeje": "bin/cli.js"
   },
   "files": [
-    "bin"
+    "bin/cli.js"
   ],
   "keywords": [],
   "author": "holim0",
