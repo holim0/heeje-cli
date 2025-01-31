@@ -10,7 +10,7 @@
     "downlevelIteration": true,
     "noImplicitAny": true,
     "lib": ["dom", "ES2015"],
-    "types": ["jest"] // Jest 타입 정의 추가
+    "types": ["node", "jest"] // Jest 타입 정의 추가
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"] // 제외 경로
