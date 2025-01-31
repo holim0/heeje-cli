@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.0.1](https://github.com/holim0/heeje-cli/compare/v1.0.0...v1.0.1) (2025-01-31)
+
+### 🐛 BUG FIXES
+
+* bin/cli.js가 확실하게 배포 대상이 되도록 수정 ([410acdd](https://github.com/holim0/heeje-cli/commit/410acddb7a694bed21517ab57efac27e2a28402a))
+
 ## 1.0.0 (2025-01-31)
 
 ### 🚀 FEATURES
