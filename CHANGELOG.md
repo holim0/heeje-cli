@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.0.3](https://github.com/holim0/heeje-cli/compare/v1.0.2...v1.0.3) (2025-01-31)
+
+### 🐛 BUG FIXES
+
+* 빌드 파일 경로 수정 ([b241ebe](https://github.com/holim0/heeje-cli/commit/b241ebebf1f9bcb89de34da705fee139bc60aedd))
+
 ## [1.0.2](https://github.com/holim0/heeje-cli/compare/v1.0.1...v1.0.2) (2025-01-31)
 
 ### 🐛 BUG FIXES
